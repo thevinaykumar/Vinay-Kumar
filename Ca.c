@@ -9,7 +9,6 @@ struct Process {
   int waitingTime;  
 };
 
-// Comparison function for sorting based on arrival time
 int arrivalCompare(const void* a, const void* b) {
   struct Process* p1 = (struct Process*)a;
   struct Process* p2 = (struct Process*)b;
@@ -33,7 +32,7 @@ int main() {
     processes[i].priority = 0;
   }
 
-  // Sort processes by arrival time
+ 
   qsort(processes, n, sizeof(struct Process), arrivalCompare);
 
   int currentTime = 0;
